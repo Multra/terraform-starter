@@ -9,7 +9,7 @@ package spacelift
 
 deny[sprintf("We require that passwords have at least 16 characters (%s)", [resource.address])] {
     resource := new_password[_]
-    resource.change.after.length < 16
+    resource.change.after.length < 5
 }
 
 warn[sprintf("We advise that passwords have at least 20 characters (%s)", [resource.address])] {
